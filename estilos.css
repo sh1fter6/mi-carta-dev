@@ -31,7 +31,7 @@ body.bg-gif {
     height: 490px;
     padding: 12px;
     box-sizing: border-box;
-    background-color: blueviolet;
+    background-color: rgb(91, 44, 94);
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
