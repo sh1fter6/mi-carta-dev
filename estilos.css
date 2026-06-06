@@ -1,0 +1,381 @@
+/* Centrar la tarjeta en la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    font-family: 'Outfit', sans-serif;
+    transition: background-image 0.5s ease;
+}
+
+/* Fondo con gif animado al activar la habilidad */
+body.bg-gif {
+    background-image: url('assets/images/background.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Contenedor principal de la carta - Proporción clásica Pokémon de 1.4:1 (350x490) */
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    border: 4px solid #777;
+    font-size: 10px;
+    width: 350px;
+    height: 490px;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: blueviolet;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Filas horizontales para distribuir texto */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Cabecera */
+.card-header {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+#header-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    color: #fff;
+}
+
+#header-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#header-rol {
+    font-size: 8px;
+    color: #ccc;
+    font-weight: 600;
+}
+
+#header-nombre {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+#header-right {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+#label-ps {
+    font-size: 8px;
+    font-weight: 800;
+    color: #ffd700;
+    text-transform: uppercase;
+}
+
+#value-ps {
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffd700;
+    line-height: 1;
+}
+
+#header-tipo i {
+    font-size: 12px;
+    margin-left: 2px;
+    color: #fff;
+}
+
+/* Imagen / Avatar */
+.card-header-avatar {
+    width: 100%;
+    position: relative;
+}
+
+#avatar {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center 65%;
+    border: 2px solid #000;
+    display: block;
+}
+
+/* Barra de Rareza (Estilo barrita Pokémon) */
+.rareza-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #ffd700, #ffa500);
+    color: #000;
+    font-size: 8px;
+    font-weight: 700;
+    text-align: center;
+    padding: 2px 0;
+    margin-top: -2px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.epica .rareza-bar {
+    background: linear-gradient(90deg, #d896ff, #9400d3);
+    color: #fff;
+}
+
+.rara .rareza-bar {
+    background: linear-gradient(90deg, #82b1ff, #1e90ff);
+    color: #fff;
+}
+
+.comun .rareza-bar {
+    background: linear-gradient(90deg, #dddddd, #888888);
+    color: #000;
+}
+
+/* Sección Estadísticas */
+.seccion-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 2px 0;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.stat-name {
+    width: 55px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    margin: 0 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #ffd700;
+    border-radius: 10px;
+}
+
+.epica .progress-bar {
+    background-color: #d896ff;
+}
+
+.rara .progress-bar {
+    background-color: #82b1ff;
+}
+
+.comun .progress-bar {
+    background-color: #cccccc;
+}
+
+.stat-value {
+    width: 15px;
+    text-align: right;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+/* Contenedor de habilidades (Original) */
+#container-habilidades {
+    border-radius: 8px;
+    border: 2px solid #000;
+    font-size: 10px;
+    width: 100%;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background-color: aqua;
+    color: #000;
+}
+
+#coste1 {
+    display: flex;
+    gap: 4px;
+}
+
+#coste1 i {
+    font-size: 11px;
+    color: #000;
+}
+
+#habilidad1 {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+#daño {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+#descripción {
+    margin-top: 2px;
+}
+
+#descripcion1 {
+    margin: 0;
+    font-size: 9px;
+    font-style: italic;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* Acciones y Botón */
+.seccion-acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 4px;
+    margin: 2px 0;
+}
+
+#btn-activar {
+    font-family: 'Outfit', sans-serif;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+#btn-activar:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+#btn-activar:active {
+    transform: scale(0.95);
+}
+
+.contador-usos {
+    color: #eee;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+/* Pie de carta */
+.card-footer {
+    width: 100%;
+    background-color: aqua;
+    border-radius: 8px;
+    padding: 4px 8px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-stat span:first-child {
+    font-size: 7px;
+    color: #444;
+    margin-bottom: 1px;
+}
+
+/* Hover sobre la carta - brillo en el borde exterior según rareza */
+.carta:hover {
+    transform: translateY(-6px);
+}
+
+.legendaria:hover {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.85);
+}
+
+.epica:hover {
+    box-shadow: 0 0 25px rgba(148, 0, 211, 0.85);
+}
+
+.rara:hover {
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.85);
+}
+
+.comun:hover {
+    box-shadow: 0 0 25px rgba(136, 136, 136, 0.85);
+}
+
+/* Colores de bordes según rareza */
+.legendaria {
+    border-color: #ffd700;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.25);
+}
+
+.epica {
+    border-color: #9400d3;
+    box-shadow: 0 4px 8px rgba(148, 0, 211, 0.25);
+}
+
+.rara {
+    border-color: #1e90ff;
+    box-shadow: 0 4px 8px rgba(30, 144, 255, 0.25);
+}
+
+.comun {
+    border-color: #888888;
+}
+
+/* Animación brillo al activar habilidad */
+.carta.activa {
+    animation: brillo-activado 0.5s ease-in-out;
+}
+
+@keyframes brillo-activado {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+        transform: scale(1.02);
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}

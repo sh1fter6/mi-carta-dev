@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Card: Sh1fter the Sorcerer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome para los iconos de coste y tipo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container-principal carta legendaria">
+
+        <!-- CABECERA -->
+        <div class="card-header">
+            <div id="header-text" class="row">
+                <div id="header-left">
+                    <span id="header-rol">[FE]</span>
+                    <span id="header-nombre">SH1FTER</span>
+                </div>
+                <div id="header-right">
+                    <span id="label-ps">ps</span>
+                    <span id="value-ps">420</span>
+                    <span id="header-tipo"><i class="fa-solid fa-code"></i></span> <!--su icono de tipo-->
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="card-header-avatar">
+            <img src="assets/images/IMG_0063.jpeg" alt="Avatar" id="avatar">
+        </div>
+
+        <!-- BARRA DE RAREZA (ESTILO BARRA POKEMON) -->
+        <div class="rareza-bar">
+            <span>Desarrollador <span class="rareza-text">Legendario</span> • ID: #0063</span>
+        </div>
+
+        <!-- ESTADÍSTICAS COMPACTAS -->
+        <div class="seccion-stats">
+            <div class="stat-row">
+                <span class="stat-name">HTML5</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+                <span class="stat-value">90</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-name">CSS3</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+                <span class="stat-value">85</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-name">JS</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 95%;"></div>
+                </div>
+                <span class="stat-value">95</span>
+            </div>
+        </div>
+
+        <!-- HABILIDADES -->
+        <div class="container" id="container-habilidades">
+            <div class="card-body">
+                <div class="card-habilidades">
+                    <div class="row">
+                        <span id="coste1">
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </span>
+                        <span id="habilidad1">Brujería Web</span>
+                        <span id="daño">300</span>
+                    </div>
+                    <div id="descripción">
+                        <p id="descripcion1">Conjura código para alterar la realidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCIONES Y CONTADOR -->
+        <div class="seccion-acciones">
+            <button id="btn-activar">Activar habilidad</button>
+            <div class="contador-usos">Activaciones: <span id="contador">0</span></div>
+        </div>
+
+        <!-- PIE DE CARTA (Debilidades, Resistencia y Retirada) -->
+        <div class="card-footer">
+            <div class="card-footer-info">
+                <div class="footer-stat">
+                    <span>debilidad</span>
+                    <span><i class="fa-brands fa-windows"></i> x2</span>
+                </div>
+                <div class="footer-stat">
+                    <span>resistencia</span>
+                    <span><i class="fa-brands fa-linux"></i> -30</span>
+                </div>
+                <div class="footer-stat">
+                    <span>retirada</span>
+                    <span><i class="fa-brands fa-html5"></i></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Cargar script.js al final del body -->
+    <script src="script.js"></script>
+</body>
+
+</html>
